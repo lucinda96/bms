@@ -2,14 +2,10 @@
 name: Feature request
 about: Suggest an idea for this project
 title: "[Feature / BMS]"
-labels: ''
+labels: 'Status: Todo, ✨ Type: Feature'
 assignees: lucinda96
 
 ---
-
-# Feature <!--{작업내용}-->
-<!--위 작업 내용 주석에 어떤 기능인지 적어주세요.-->
-
 
 ## 📜 Description
 <!-- 제안하는 기능에 대한 아래에 설명을 적어주세요. -->
