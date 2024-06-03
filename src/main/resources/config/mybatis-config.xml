@@ -24,7 +24,7 @@
             </dataSource>
         </environment>
     </environments>
-<!--    <mappers>-->
-<!--        <mapper resource="sql/warehouse/WarehouseMapper.xml"/>-->
-<!--    </mappers>-->
+    <mappers>
+        <mapper resource="sql/UserMapper.xml"/>
+    </mappers>
 </configuration>
