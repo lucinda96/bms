@@ -1,9 +1,9 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: "[버그리포트]"
-labels: ''
-assignees: ''
+title: "[Bug / BMS]"
+labels: "Status: Todo, \U0001F41E Type: Bug"
+assignees: lucinda96
 
 ---
 
