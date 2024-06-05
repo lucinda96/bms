@@ -13,4 +13,27 @@
             AND password = #{password}
             AND role = #{role}
     </select>
+
+    <select id = "existUserId" parameterType = "String" resultType = "int">
+        SELECT
+            COUNT(*)
+        FROM
+            tbl_user
+        WHERE
+            user_id = #{userId}
+    </select>
+
+    <insert id = "registerUserInfo" parameterType = "userDTO">
+        INSERT INTO tbl_user (
+            user_id,
+            username,
+            password,
+            role
+        ) VALUES (
+            #{userId},
+            #{userName},
+            #{password},
+            #{role}
+        )
+    </insert>
 </mapper>

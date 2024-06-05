@@ -10,13 +10,31 @@ public class UserService {
 
 
     public UserDTO login(UserDTO userDTO) {
-
         SqlSession sqlSession = getSqlSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-
-        UserDTO result = userMapper.login(userDTO);
-
+        UserDTO userDto = userMapper.login(userDTO);
         sqlSession.close();
-        return result;
+        return userDto;
+    }
+
+    public boolean joinMember(UserDTO userDTO) {
+        SqlSession sqlSession = getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        int result = userMapper.registerUserInfo(userDTO);
+        if(result>0){
+            sqlSession.commit();
+            return true;
+        }else{
+            sqlSession.rollback();
+            return false;
+        }
+
+    }
+
+    public boolean existUserId(String userId) {
+        SqlSession sqlSession = getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        int result = userMapper.existUserId(userId);
+        return result>0;
     }
 }

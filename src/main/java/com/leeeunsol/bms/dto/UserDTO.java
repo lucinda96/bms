@@ -11,9 +11,10 @@ public class UserDTO {
     private String userName;
     private String role;
 
-    public UserDTO(String userId, String password, String role) {
+    public UserDTO(String userId, String password, String userName,String role) {
         this.userId = userId;
         this.password = password;
+        this.userName = userName;
         this.role = role;
     }
 }

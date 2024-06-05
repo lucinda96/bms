@@ -22,7 +22,7 @@ public class MenuView {
             sc.nextLine();
             switch(menu){
                 case 1:
-                    joinMember();
+                    userController.joinMember(inputRegisterUsertData());
                     break;
                 case 2:
                     userController.login(inputLoginInfo());
@@ -38,18 +38,32 @@ public class MenuView {
         }
     }
 
-    private void joinMember() {
-        System.out.println("회원가입메뉴");
+    private UserDTO inputRegisterUsertData() {
+
+        System.out.print("아이디를 입력해주세요: ");
+        String userId = sc.nextLine();
+
+        System.out.print("비밀번호를 입력해주세요: ");
+        String password = sc.nextLine();
+
+        System.out.println("사용자 이름을 입력해주세요: ");
+        String userName = sc.nextLine();
+
+
+        return new UserDTO(userId,password,userName,Role.user.name());
     }
 
     private UserDTO inputLoginInfo() {
+
         String role = selectRole("로그인 할 ");
+
         System.out.print("아이디를 입력하세요: ");
         String id = sc.nextLine();
+
         System.out.print("비밀번호를 입력하세요: ");
         String password = sc.nextLine();
 
-        return new UserDTO(id,password,role);
+        return new UserDTO(id,password,null,role);
     }
 
     private String selectRole(String text){
