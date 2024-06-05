@@ -9,24 +9,23 @@ public class UserController {
     private UserService userService = new UserService();
     private ResultMessage resultMessage = new ResultMessage();
 
-    public UserDTO login(UserDTO userDTO) {
+    public void login(UserDTO userDTO) {
 
         if(userDTO.getUserId() == null || userDTO.getUserId().isEmpty()){
-            resultMessage.faillMsg("notInputId");
-            return null;
+            //아이디를 입력하지 않은경우
+            resultMessage.failMsg("notInputId");
         } else if (userDTO.getPassword() == null || userDTO.getPassword().isEmpty()) {
-            resultMessage.faillMsg("notInputPassword");
-            return null;
+            //비밀번호를 입력하지 않은경우
+            resultMessage.failMsg("notInputPassword");
         } else {
             UserDTO result = userService.login(userDTO);
             if(result == null || result.getUserName() == null || result.getUserName().isEmpty()){
-                resultMessage.faillMsg("login");
-                return null;
+                // 계정이 없는 경우
+                resultMessage.failMsg("login");
             }else {
-                resultMessage.succesMsg("login");
-                return result;
+                resultMessage.successMsg("login");
             }
         }
-
     }
+
 }
