@@ -36,4 +36,34 @@
             #{role}
         )
     </insert>
+
+    <select id="existCompanyInfo" parameterType="String" resultType="int">
+        SELECT
+            COUNT(*)
+        FROM
+            tbl_user inner join tbl_company on tbl_user.uid = tbl_company.uid
+        WHERE
+            tbl_user.user_id = #{userId}
+    </select>
+
+    <insert id="registerCompanyInfo" parameterType="companyDTO">
+        <selectKey keyProperty="uid" order="BEFORE" resultType="int">
+            SELECT uid FROM tbl_user WHERE user_id = #{userId}
+        </selectKey>
+        INSERT INTO tbl_company (
+            uid,
+            company_name,
+            company_phone,
+            company_num,
+            company_address,
+            delete_yn
+        ) VALUES (
+            #{uid},
+            #{companyName},
+            #{companyPhone},
+            #{companyNum},
+            #{companyAddress},
+            false
+        )
+    </insert>
 </mapper>

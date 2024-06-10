@@ -1,5 +1,6 @@
 package com.leeeunsol.bms.mapper;
 
+import com.leeeunsol.bms.dto.CompanyDTO;
 import com.leeeunsol.bms.dto.UserDTO;
 
 public interface UserMapper {
@@ -8,4 +9,8 @@ public interface UserMapper {
     int existUserId(String userId);
 
     int registerUserInfo(UserDTO userDTO);
+
+    int registerCompanyInfo(CompanyDTO companyDTO);
+
+    int existCompanyInfo(String userId);
 }

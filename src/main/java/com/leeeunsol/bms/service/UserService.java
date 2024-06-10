@@ -1,5 +1,6 @@
 package com.leeeunsol.bms.service;
 
+import com.leeeunsol.bms.dto.CompanyDTO;
 import com.leeeunsol.bms.dto.UserDTO;
 import com.leeeunsol.bms.mapper.UserMapper;
 import org.apache.ibatis.session.SqlSession;
@@ -36,5 +37,25 @@ public class UserService {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         int result = userMapper.existUserId(userId);
         return result>0;
+    }
+
+    public boolean findTransferAuthApplication(String userId) {
+        SqlSession sqlSession = getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        int result = userMapper.existCompanyInfo(userId);
+        return result>0;
+    }
+
+    public boolean registerCompanyInfo(CompanyDTO companyDTO) {
+        SqlSession sqlSession = getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        int result = userMapper.registerCompanyInfo(companyDTO);
+        if(result>0){
+            sqlSession.commit();
+            return true;
+        }else{
+            sqlSession.rollback();
+            return false;
+        }
     }
 }
