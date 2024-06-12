@@ -1,4 +1,4 @@
-package com.leeeunsol.bms.common;
+package com.leeeunsol.bms.config;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

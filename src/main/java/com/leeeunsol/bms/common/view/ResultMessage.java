@@ -1,4 +1,4 @@
-package com.leeeunsol.bms.view;
+package com.leeeunsol.bms.common.view;
 
 public class ResultMessage {
 

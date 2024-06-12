@@ -1,7 +1,7 @@
-package com.leeeunsol.bms.mapper;
+package com.leeeunsol.bms.user.mapper;
 
-import com.leeeunsol.bms.dto.CompanyDTO;
-import com.leeeunsol.bms.dto.UserDTO;
+import com.leeeunsol.bms.common.dto.CompanyDTO;
+import com.leeeunsol.bms.common.dto.UserDTO;
 
 public interface UserMapper {
     UserDTO login(UserDTO userDTO);

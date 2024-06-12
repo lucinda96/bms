@@ -1,7 +1,7 @@
-package com.leeeunsol.bms.view;
+package com.leeeunsol.bms.user.view;
 
-import com.leeeunsol.bms.controller.UserController;
-import com.leeeunsol.bms.dto.CompanyDTO;
+import com.leeeunsol.bms.user.controller.UserController;
+import com.leeeunsol.bms.common.dto.CompanyDTO;
 
 import java.util.Scanner;
 

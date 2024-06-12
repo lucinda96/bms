@@ -1,11 +1,11 @@
-package com.leeeunsol.bms.service;
+package com.leeeunsol.bms.user.service;
 
-import com.leeeunsol.bms.dto.CompanyDTO;
-import com.leeeunsol.bms.dto.UserDTO;
-import com.leeeunsol.bms.mapper.UserMapper;
+import com.leeeunsol.bms.common.dto.CompanyDTO;
+import com.leeeunsol.bms.common.dto.UserDTO;
+import com.leeeunsol.bms.user.mapper.UserMapper;
 import org.apache.ibatis.session.SqlSession;
 
-import static com.leeeunsol.bms.common.MyBatisTemplate.getSqlSession;
+import static com.leeeunsol.bms.config.MyBatisTemplate.getSqlSession;
 
 public class UserService {
 

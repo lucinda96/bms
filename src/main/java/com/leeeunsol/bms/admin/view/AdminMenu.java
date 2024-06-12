@@ -1,4 +1,4 @@
-package com.leeeunsol.bms.view;
+package com.leeeunsol.bms.admin.view;
 
 public class AdminMenu {
 

@@ -1,12 +1,12 @@
-package com.leeeunsol.bms.controller;
+package com.leeeunsol.bms.user.controller;
 
-import com.leeeunsol.bms.dto.CompanyDTO;
-import com.leeeunsol.bms.dto.UserDTO;
-import com.leeeunsol.bms.service.UserService;
-import com.leeeunsol.bms.view.AdminMenu;
-import com.leeeunsol.bms.view.ResultMessage;
-import com.leeeunsol.bms.view.SellerMenu;
-import com.leeeunsol.bms.view.UserMenu;
+import com.leeeunsol.bms.common.dto.CompanyDTO;
+import com.leeeunsol.bms.common.dto.UserDTO;
+import com.leeeunsol.bms.user.service.UserService;
+import com.leeeunsol.bms.admin.view.AdminMenu;
+import com.leeeunsol.bms.common.view.ResultMessage;
+import com.leeeunsol.bms.seller.view.SellerMenu;
+import com.leeeunsol.bms.user.view.UserMenu;
 
 public class UserController {
 

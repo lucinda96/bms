@@ -1,4 +1,4 @@
-package com.leeeunsol.bms.dto;
+package com.leeeunsol.bms.common.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
 package com.leeeunsol.bms;
 
-import com.leeeunsol.bms.view.MenuView;
+import com.leeeunsol.bms.common.view.MenuView;
 
 public class run {
     public static void main(String[] args) {

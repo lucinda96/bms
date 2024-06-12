@@ -1,8 +1,8 @@
-package com.leeeunsol.bms.view;
+package com.leeeunsol.bms.common.view;
 
-import com.leeeunsol.bms.common.Role;
-import com.leeeunsol.bms.controller.UserController;
-import com.leeeunsol.bms.dto.UserDTO;
+import com.leeeunsol.bms.constant.Role;
+import com.leeeunsol.bms.user.controller.UserController;
+import com.leeeunsol.bms.common.dto.UserDTO;
 
 import java.util.Scanner;
 

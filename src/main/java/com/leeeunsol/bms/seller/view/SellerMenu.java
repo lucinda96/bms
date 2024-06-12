@@ -1,4 +1,4 @@
-package com.leeeunsol.bms.view;
+package com.leeeunsol.bms.seller.view;
 
 public class SellerMenu {
 
